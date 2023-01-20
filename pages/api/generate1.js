@@ -30,6 +30,8 @@ export default async function (req, res) {
       model: "text-davinci-003",
       prompt: generatePrompt(prodServiceSolution),
       temperature: 0.9,
+      max_tokens: 100,
+      top_p: 1,
     });
     console.log(completion.data);
     res.status(200).json({ result: completion.data.choices[0].text });
@@ -52,7 +54,5 @@ export default async function (req, res) {
 function generatePrompt(prodServiceSolution) {
   const capitalizedProdServiceSolution =
   prodServiceSolution[0].toUpperCase() + prodServiceSolution.slice(1).toLowerCase();
-  return `Suggest three leads.
-
-productServiceSolution: ${capitalizedProdServiceSolution}`
+  return `how could ${capitalizedProdServiceSolution} integrate gpt 3 in their products` 
 }

@@ -52,8 +52,14 @@
   color: #8e8ea0;
   opacity: 1;
 }
-.main input[type="submit"] {
+.main .btncover{
+  display: flex;
+  gap: 2px;
+  flex-direction: row;
+}
+.main button{
   padding: 12px 0;
+  width: 90px;
   color: #fff;
   background-color: #10a37f;
   border: none;
