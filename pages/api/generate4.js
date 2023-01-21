@@ -54,5 +54,5 @@ export default async function (req, res) {
 function generatePrompt(prodServiceSolution) {
   const capitalizedProdServiceSolution =
   prodServiceSolution[0].toUpperCase() + prodServiceSolution.slice(1).toLowerCase();
-  return `how could ${capitalizedProdServiceSolution} integrate gpt 3 in their products` 
+  return `How to integrate ChatGPT on these products or services to maximise value and  revenue ${capitalizedProdServiceSolution}?` 
 }
