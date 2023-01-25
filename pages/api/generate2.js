@@ -33,7 +33,6 @@ export default async function (req, res) {
       max_tokens: 100,
       top_p: 1,
     });
-    console.log(completion.data);
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
     // Consider adjusting the error handling logic for your use case
